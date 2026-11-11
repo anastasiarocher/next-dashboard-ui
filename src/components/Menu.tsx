@@ -123,10 +123,9 @@ const Menu = () => {
   <div className="flex flex-col gap-2" key={i.title}>
     <span className="hidden lg:block text-gray-400 font-light my-4">{i.title}</span>
     {i.items.map(items=>(
-      <Link href={items.href} key={items.label}>
+      <Link href={items.href} key={items.label} className="flex items-center justify-center lg-justify:start gap-4 text-gray-500 py-2">
       <Image src={items.icon} alt="" height={20} width={20}/>
-      <span>{items.label}
-      </span>
+      <span className="hidden lg:block">{items.label}</span>
     </Link>
     ))}
     </div>
